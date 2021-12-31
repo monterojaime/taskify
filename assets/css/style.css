@@ -50,7 +50,7 @@ form input {
   padding: 12px;
   width: 100%;
   font-size: 2.2rem;
-  border: 2px solid var(--grey);
+  /* border: 2px solid var(--grey); */
   border-radius: 12px;
 }
 
@@ -100,13 +100,13 @@ footer {
   height: calc(100% - 50px);
   background: rgb(196, 196, 196);
   border-radius: 12px;
-  border: 2px solid var(--grey);
+  /* border: 2px solid var(--grey); */
 }
 
 .task-item {
   color: var(--grey);
   padding: 15px 15px;
-  border: 2px solid var(--grey);
+  /* border: 2px solid var(--grey); */
   background: var(--tertiary);
   border-radius: 12px;
   margin-bottom: 20px;
@@ -144,11 +144,11 @@ footer {
   border-radius: 12px;
   position: relative;
   top: -3px;
-  box-shadow: 0 3px var(--grey);
+  /* box-shadow: 5px 6px 8px 1px var(--grey); */
 }
 
 .btn:hover {
-  box-shadow: 0 2px var(--grey);
+  box-shadow: 0 2px 5px var(--grey);
   top: -2px;
 }
 .btn:active {
@@ -174,7 +174,7 @@ footer {
   width: 100%;
   max-width: 100%;
   margin: 0;
-  border: 2px solid var(--grey);
+  /* border: 0px solid var(--grey); */
   border-radius: 12px;
   -moz-appearance: none;
   -webkit-appearance: none;
