@@ -3,9 +3,9 @@
 }
 
 :root {
-  --primary: #44e9ff;
-  --secondary: #497980;
-  --tertiary: rgb(192, 246, 253);
+  --primary: #e0e0e0;
+  --secondary: #41547c;
+  --tertiary: rgb(192, 208, 253);
   --grey: #333;
   font-size: 62.5%;
 }
@@ -18,7 +18,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Helvetica, Geneva, Tahoma, sans-serif;
 }
 
 header {
