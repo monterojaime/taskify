@@ -1,23 +1,34 @@
 let buttonEl = document.querySelector("#save-task");
 let taskList = document.querySelector("#task-to-do");
 let taskForm = document.querySelector("#task-form");
-let taskNameInput = document.querySelector("input[name='task-name']");
-let taskTypeInput = document.querySelector("select[name='task-type']");
 
-let createTaskHandler = function (event) {
-    console.log(taskNameInput);
+
+let taskFormHandler = function (event) {
     event.preventDefault();
 
+    let taskNameInput = document.querySelector("input[name='task-name']").value;
+    let taskTypeInput = document.querySelector("select[name='task-type']").value;
+
+    let taskData = {
+        name: taskNameInput,
+        type: taskTypeInput
+    };
+
+    createTaskEl(taskData);
+
+
+}
+
+let createTaskEl = function(dataObj){
     let newTask = document.createElement("li");
     newTask.classList.add("task-item");
 
     let taskInfo = document.createElement("div");
 
     taskInfo.classList.add("task-info");
-    taskInfo.innerHTML = "<h3 class='task-name'>"+taskNameInput.value+"</h3><span class='task-type'>"+taskTypeInput.value+"</span>";
+    taskInfo.innerHTML = "<h3 class='task-name'>"+dataObj.name+"</h3><span class='task-type'>"+dataObj.type+"</span>";
     newTask.appendChild(taskInfo);
     taskList.appendChild(newTask);
-    //taskNameInput.value = "";
 }
 
-taskForm.addEventListener('submit', createTaskHandler);
+taskForm.addEventListener('submit', taskFormHandler);
