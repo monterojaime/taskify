@@ -9,6 +9,13 @@ let taskFormHandler = function (event) {
     let taskNameInput = document.querySelector("input[name='task-name']").value;
     let taskTypeInput = document.querySelector("select[name='task-type']").value;
 
+    if(!taskNameInput || !taskTypeInput){
+        alert("A task cannot be created if you don't input data");
+        return false;
+    }
+
+    taskForm.reset();
+
     let taskData = {
         name: taskNameInput,
         type: taskTypeInput
